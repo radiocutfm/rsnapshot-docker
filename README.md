@@ -30,6 +30,8 @@ The content is a list of `backup` statements (or other statements from the `rsna
 
 Environment
 -----------
+**`PUSHGATEWAY_URL`**
+This is an optional URL to push backup metrics to a prometheus pushgateway, for monitoring. Currently only the timestamp for each rotation level is reported.
 
 **`BACKUP_NAME`**
 This is the name of the backup source you are backing up. Default is `localhost` and it will be used as the name of the subfolder (under the `daily.X` etc folders) in the `/backup` volume.
