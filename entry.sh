@@ -15,6 +15,7 @@ cmd_rm		/bin/rm
 cmd_rsync	/usr/bin/rsync
 cmd_ssh		/usr/bin/ssh
 cmd_logger	/usr/bin/logger
+one_fs	1
 ssh_args	-i /ssh-id -o StrictHostKeychecking=no ${BACKUP_SSH_ARGS}
 verbose		1
 lockfile	/var/run/rsnapshot.pid
