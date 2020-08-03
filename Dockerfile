@@ -9,6 +9,7 @@ ENV BACKUP_NAME=localhost
 ENV BACKUP_SOURCE=/data
 ENV BACKUP_OPTS=
 ENV BACKUP_SYNC_FIRST=1
+ENV BACKUP_SYNC_IGNORE_WARNINGS=1
 ENV BACKUP_HOURLY=0
 ENV BACKUP_DAILY=3
 ENV BACKUP_WEEKLY=3
@@ -26,5 +27,6 @@ RUN apk add --update rsnapshot tzdata curl
 
 ADD entry.sh /entry.sh
 ADD metrics.sh /metrics.sh
+ADD rsnapshot_sync.sh /rsnapshot_sync.sh
 
 CMD ["/bin/sh", "/entry.sh"]

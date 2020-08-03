@@ -28,7 +28,7 @@ echo "${CRON_HOURLY} /metrics.sh" > /etc/crontabs/root
 
 RSNAPSHOT_SYNC_COMMAND=""
 if [ "${BACKUP_SYNC_FIRST}" -eq 1 ]; then
-  RSNAPSHOT_SYNC_COMMAND="rsnapshot sync &&"
+  RSNAPSHOT_SYNC_COMMAND="/rsnapshot_sync.sh &&"
 fi
 
 
