@@ -24,7 +24,7 @@ backup		${BACKUP_SOURCE}	${BACKUP_NAME}/	${BACKUP_OPTS}
 EOF
 
 # prepare crontab for root
-touch /etc/crontabs/root
+echo "${CRON_HOURLY} /metrics.sh" > /etc/crontabs/root
 
 RSNAPSHOT_SYNC_COMMAND=""
 if [ "${BACKUP_SYNC_FIRST}" -eq 1 ]; then
